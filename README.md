@@ -20,5 +20,4 @@ Nothing else should be considered or implemented.
 * PostgreSQL for database
 * Warden for user authentication
 * Cucumber for acceptance tests
-* RSpec for unit tests
-
+* RSpec for unit tests.
