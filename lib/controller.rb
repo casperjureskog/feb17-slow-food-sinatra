@@ -11,9 +11,7 @@ require 'pry'
 
 
 
-get '/' do
-  "Hello fucking World"
-end
+
 class SlowFood < Sinatra::Base
   enable :sessions
   register Sinatra::Flash
@@ -58,9 +56,18 @@ class SlowFood < Sinatra::Base
     erb :index
   end
 
-  get '/auth/login' do
+  get '/auth/login.erb' do
     erb :login
   end
+
+  get '/cart.erb' do
+     erb :cart
+  end
+
+  get '/menu.erb' do
+     erb :menu
+  end
+
 
   post '/auth/login' do
     env['warden'].authenticate!
