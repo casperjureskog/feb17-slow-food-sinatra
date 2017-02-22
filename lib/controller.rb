@@ -7,7 +7,9 @@ require 'pry'
 
 
 
-
+get '/' do
+  "Hello World"
+end
 
 
 class SlowFood < Sinatra::Base
