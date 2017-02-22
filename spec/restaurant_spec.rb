@@ -1,6 +1,6 @@
 require './lib/models/restaurant'
 
-describe Restaurand do
+describe Restaurant do
    it { is_expected.to have_property :id }
    it { is_expected.to have_property :name }
 
