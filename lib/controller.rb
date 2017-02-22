@@ -1,3 +1,4 @@
+require 'Sinatra'
 require 'bundler'
 Bundler.require
 Dir[File.join(File.dirname(__FILE__), 'models', '*.rb')].each { |file| require file }
@@ -10,14 +11,17 @@ require 'pry'
 
 
 
+get '/' do
+  "Hello fucking World"
+end
 class SlowFood < Sinatra::Base
   enable :sessions
   register Sinatra::Flash
   register Sinatra::Warden
   set :session_secret, "supersecret"
 
-  #binding.pry
-  #Create a test User
+
+  # Create a test User
   if User.count == 0
    @user = User.create(username: "admin")
    @user.password = "admin"
