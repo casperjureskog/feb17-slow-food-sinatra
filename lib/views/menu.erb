@@ -1,5 +1,19 @@
 <h1>Our Menu</h1>
 
-  <% @dishes.each do | dish | %>
+<h2>Categories</h2>
+
+<h3>Starters</h3>
+
+  <% @starter.each do | dish | %>
+  <p><%= dish.name %>, <%= dish.price %></p>
+  <% end %>
+
+<h3>Main Courses</h3>
+  <% @main_course.each do | dish | %>
+  <p><%= dish.name %>, <%= dish.price %></p>
+  <% end %>
+
+<h3>Desserts</h3>
+  <% @dessert.each do | dish | %>
   <p><%= dish.name %>, <%= dish.price %></p>
   <% end %>
