@@ -4,7 +4,6 @@ Feature: As a customer
 
 Scenario: When looking at the menu page
   Given I visit the menu page
-  Then I should see "Categories"
   And I should see "Starters"
   And I should see "Main Courses"
   And I should see "Desserts"
