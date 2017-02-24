@@ -14,14 +14,14 @@
       <div class="large-2 columns">&nbsp;
       </div>
       <div class="large-8 columns">&nbsp;
-        <a href="#home" id="logo">
+        <a href="/" id="logo">
            <img src="images/slowlogo.jpg" alt=""><br>
         </a>
 
 
         <div class="navigation">
           <ul>
-            <li><a class="active" href="#home">Home</a></li>
+            <li><a class="active" href="/">Home</a></li>
             <li><a href="menu">Menu</a></li>
             <li><a href="cart">Cart</a></li>
             <li><a href="/auth/login">Login</a></li>
@@ -31,7 +31,15 @@
       <div class="large-2 columns">&nbsp;
       </div>
     </div>
-    <%= yield %>
+      <div class="row">
+        <div class="large-2 columns">&nbsp;
+        </div>
+        <div class="body large-8 columns">
+          <%= yield %>
+        </div>
+        <div class="large-2 columns">&nbsp;
+        </div>
+    </div>
     <div class="body2 row">
       <div class="large-2 columns">&nbsp;
       </div>
