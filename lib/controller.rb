@@ -85,8 +85,11 @@ class SlowFood < Sinatra::Base
   #   end
   # end
 
-  post '/owner/' do
-      @owner = Dish.create(:name, :price, :category)
+  post '/owner' do
+    binding.pry
+      @owner = Dish.get(params[:name1])
+      @owner = Dish.get(params[:price1])
+
   end
 
   post '/auth/login' do
