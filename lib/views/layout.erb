@@ -1,5 +1,55 @@
 <!doctype html>
-<html>
+<html class="no-js" lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foundation for Sites</title>
+    <link rel="stylesheet" href="foundation.css">
+    <link rel="stylesheet" href="app.css">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="row">
+      <div class="large-2 columns">&nbsp;
+      </div>
+      <div class="large-8 columns">&nbsp;
+        <a href="#home" id="logo">
+           <img src="images/slowlogo.jpg" alt=""><br>
+        </a>
+
+
+        <div class="navigation">
+          <ul>
+            <li><a class="active" href="#home">Home</a></li>
+            <li><a href="menu">Menu</a></li>
+            <li><a href="cart">Cart</a></li>
+            <li><a href="/auth/login">Login</a></li>
+         </ul>
+        </div>
+      </div>
+      <div class="large-2 columns">&nbsp;
+      </div>
+    </div>
+    <%= yield %>
+    <div class="body2 row">
+      <div class="large-2 columns">&nbsp;
+      </div>
+      <div class="large-8 columns">
+        <div class="foot">
+          <h5> Craft Academy 2017 &nbsp;&nbsp;</h5>
+        </div>
+      </div>
+      <div class="large-2 columns">&nbsp;
+      </div>
+    </div>
+    <script src="js/vendor/jquery.js"></script>
+    <script src="js/vendor/what-input.js"></script>
+    <script src="js/vendor/foundation.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>
+<!-- <html>
 <head>
 <body>
 <title>Sinatra Warden</title>
@@ -29,4 +79,4 @@
 
   <%= yield %>
   </body>
-</html>
+</html> -->
