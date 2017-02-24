@@ -75,6 +75,19 @@ class SlowFood < Sinatra::Base
      erb :menu
   end
 
+  get '/owner' do
+     erb :owner
+  end
+
+  # def test_hello_form_post
+  #     post '/new_dish/', params={:name, :price :category}
+  #
+  #   end
+  # end
+
+  post '/owner/' do
+      @owner = Dish.create(:name, :price, :category)
+  end
 
   post '/auth/login' do
     env['warden'].authenticate!
