@@ -57,7 +57,9 @@ class SlowFood < Sinatra::Base
   end
 
   get '/menu' do
-    @dishes = Dish.all
+    @starter = Dish.all(category: 'starter')
+    @main_course = Dish.all(category: 'main_course')
+    @dessert = Dish.all(category: 'dessert')
     erb :menu
   end
 
