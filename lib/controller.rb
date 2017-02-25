@@ -76,7 +76,10 @@ class SlowFood < Sinatra::Base
   end
 
   get '/owner' do
-     erb :owner
+    @starter = Dish.all(category: 'starter')
+    @main_course = Dish.all(category: 'main_course')
+    @dessert = Dish.all(category: 'dessert')
+    erb :owner
   end
 
   # def test_hello_form_post
@@ -86,11 +89,16 @@ class SlowFood < Sinatra::Base
   # end
 
   post '/owner' do
-    binding.pry
-      @owner = Dish.get(params[:name1])
-      @owner = Dish.get(params[:price1])
-
-  end
+      ownername = params[:name]
+      ownerprice = params[:price]
+      ownercategory = params[:category]
+      owner2 = Dish.create(:name => ownername, :price => ownerprice, :category => ownercategory)
+      owner2.save
+      @starter = Dish.all(category: 'starter')
+      @main_course = Dish.all(category: 'main_course')
+      @dessert = Dish.all(category: 'dessert')
+      erb :owner
+    end
 
   post '/auth/login' do
     env['warden'].authenticate!

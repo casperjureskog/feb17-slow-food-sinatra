@@ -2,10 +2,29 @@
     Dish name: <input type="text" name="name" id="name1">
     Dish price: <input type="text" name="price" id="price1"> <br>
     Dish category:
-    <select id="category">
+    <select name="category">
       <option>starter</option>
       <option>main_course</option>
       <option>dessert</option>
     </select>
     <input type="submit">
 </form>
+<h1>Our Menu</h1>
+
+<h3>Starters</h3>
+
+   <% @starter.each do | dish | %>
+      <p><%= dish.name %>, <%= dish.price %></p>
+   <% end %>
+
+<h3>Main Courses</h3>
+
+   <% @main_course.each do | dish | %>
+      <p><%= dish.name %>, <%= dish.price %></p>
+   <% end %>
+
+<h3>Desserts</h3>
+
+   <% @dessert.each do | dish | %>
+      <p><%= dish.name %>, <%= dish.price %></p>
+   <% end %>
