@@ -5,6 +5,7 @@ Feature: As a Owner
    Background:
       When I visit the owner site
 
-   Scenario: User want to see selected items in owner
-      When I fild in the form field name1
-      Then I should get "pasta"
+   Scenario: User want to add dish
+      When owner adds dish
+      Then I submit
+      

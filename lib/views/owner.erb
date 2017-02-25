@@ -8,7 +8,7 @@
       <option>main_course</option>
       <option>dessert</option>
     </select>
-    <input type="submit">
+    <input type="submit" value="Submit">
 </form>
 <h1>Our Menu</h1>
 
@@ -17,8 +17,8 @@
    <% @starter.each do | dish | %>
       <p><%= dish.name %>, <%= dish.price %>
       <form action="/owner" method="POST">
-      <button name="subject" type="submit" value='<%= dish.id %>' >Delete</button>
-    </form></p><br>
+        <button name="subject" class="button" type="submit" value='<%= dish.id %>' >Delete</button>
+      </form></p><br>
    <% end %>
 
 <h3>Main Courses</h3>
@@ -26,8 +26,8 @@
    <% @main_course.each do | dish | %>
       <p><%= dish.name %>, <%= dish.price %>
       <form action="/owner" method="POST">
-      <button name="subject" type="submit" value='<%= dish.id %>' >Delete</button>
-    </form></p><br>
+        <button name="subject" class="button" type="submit" value='<%= dish.id %>' >Delete</button>
+      </form></p><br>
     <% end %>
 
 <h3>Desserts</h3>
@@ -35,6 +35,6 @@
    <% @dessert.each do | dish | %>
       <p><%= dish.name %>, <%= dish.price %></p>
       <form action="/owner" method="POST">
-      <button name="subject" type="submit" value='<%= dish.id %>' >Delete</button>
-    </form></p><br>
+        <button name="subject" class="button" type="submit" value='<%= dish.id %>' >Delete</button>
+      </form></p><br>
    <% end %>
