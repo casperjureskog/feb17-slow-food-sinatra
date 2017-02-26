@@ -68,7 +68,9 @@ class SlowFood < Sinatra::Base
   end
 
   get '/cart' do
-     erb :cart
+    checkout_item = params[:user_id]
+    @checkout_item = Cart.all(category: checkout_item)
+    erb :cart
   end
 
   get '/menu' do

@@ -1,1 +1,9 @@
 Cart page
+
+
+ <% @checkout_item.each do | dish | %>
+    <p><%= dish.name %>, <%= dish.price %></p>
+    <form action="/owner" method="POST">
+ +        <button name="subject" class="button" type="submit" value='<%= Cart.id %>' >Checkout</button>
+ +      </form>
+ <% end %>
