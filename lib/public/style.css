@@ -24,15 +24,24 @@ li a:hover {
 
 .body {
   height: 503px;
+
+  background-repeat: no-repeat;
+  background-origin: content-box;
 }
 
 .body2 {
   height: 20px;
 }
 
+.bg_frame {
+  height: 503px;
+  padding: 25px;
+  background-color: #999;
+  background-repeat: no-repeat;
+}
+
 .foot {
   background-color: #000;
-
 }
 
 h5 {
