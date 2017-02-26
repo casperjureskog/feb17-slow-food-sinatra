@@ -5,7 +5,14 @@ Feature: As a Owner
    Background:
       When I visit the owner site
 
-   Scenario: User want to add dish
-      When owner adds dish
-      Then I submit
-      
+   Scenario:
+      Given I visit the owner site
+      And I fill in "name" with "dish"
+      And I fill in "price" with "34"
+      Given I click the "Submit" button
+      Then I should see "Whatever"
+
+
+      # User want to add dish
+      #   When owner adds dish
+      #   Then I submit

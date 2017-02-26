@@ -90,27 +90,12 @@ class SlowFood < Sinatra::Base
     erb :owner
   end
 
-  # def test_hello_form_post
-  #     post '/new_dish/', params={:name, :price :category}
-  #
-  #   end
-  # end
-
   post '/owner' do
       ownername = params[:name]
       ownerprice = params[:price]
       ownercategory = params[:category]
       owner2 = Dish.create(:name => ownername, :price => ownerprice, :category => ownercategory)
       owner2.save
-      @starter = Dish.all(category: 'starter')
-      @main_course = Dish.all(category: 'main_course')
-      @dessert = Dish.all(category: 'dessert')
-
-      # erase = params[:subject]
-      # if erase != nil
-      #   tag = Dish.all(:id => erase)
-      #   tag.all.destroy
-      # end
       erb :owner
     end
 

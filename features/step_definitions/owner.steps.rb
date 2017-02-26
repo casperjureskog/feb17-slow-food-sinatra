@@ -2,12 +2,11 @@ Given(/^I visit the owner site$/) do
   visit '/owner'
 end
 
-When(/^owner adds dish$/) do
-  visit '/owner'
+Given(/^I fill in "([^"]*)" with "([^"]*)"$/) do |name, dish|
   fill_in 'name', :with=> 'dish'
-  fill_in 'price', :with=> '34'
 end
 
-Then /^I submit$/ do
-  click_on 'Submit'
+
+Given  /^I click the "Submit" button$/ do
+  click_link_or_button
 end
