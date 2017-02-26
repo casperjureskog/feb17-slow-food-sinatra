@@ -52,13 +52,6 @@ class SlowFood < Sinatra::Base
     env['REQUEST_METHOD'] = 'POST'
   end
 
-  get '/layout' do
-    own = User.all(username: "admin")
-    if own != nil
-      @owner1 = "owner"
-    end
-    erb :layout
-  end
 
   get '/' do
     erb :index
@@ -91,11 +84,20 @@ class SlowFood < Sinatra::Base
   end
 
   post '/owner' do
+      @starter = Dish.all(category: 'starter')
+      @main_course = Dish.all(category: 'main_course')
+      @dessert = Dish.all(category: 'dessert')
       ownername = params[:name]
       ownerprice = params[:price]
       ownercategory = params[:category]
       owner2 = Dish.create(:name => ownername, :price => ownerprice, :category => ownercategory)
       owner2.save
+      erase = params[:subject]
+      if erase != nil
+        tag = Dish.all(:id => erase)
+        tag.all.destroy
+      end
+
       erb :owner
     end
 

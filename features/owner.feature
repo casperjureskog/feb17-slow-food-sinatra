@@ -9,7 +9,7 @@ Feature: As a Owner
       Given I visit the owner site
       And I fill in "name" with "dish"
       And I fill in "price" with "34"
-      Given I click the "Submit" button
+      Then I click submit
       Then I should see "Whatever"
 
 
