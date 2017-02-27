@@ -9,8 +9,8 @@ Feature: As a Owner
       Given I visit the owner site
       And I fill in "name" with "dish"
       And I fill in "price" with "34"
-      Then I click submit
-      Then I should see "Whatever"
+      And I click submit
+      Then I should see "dish"
 
 
       # User want to add dish

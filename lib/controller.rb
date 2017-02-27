@@ -90,7 +90,7 @@ class SlowFood < Sinatra::Base
       ownername = params[:name]
       ownerprice = params[:price]
       ownercategory = params[:category]
-      owner2 = Dish.create(:name => ownername, :price => ownerprice, :category => ownercategory)
+      owner2 = Dish.create(name: ownername, price: ownerprice, category: ownercategory)
       owner2.save
       erase = params[:subject]
       if erase != nil

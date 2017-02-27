@@ -3,7 +3,7 @@ Given(/^I visit the owner site$/) do
 end
 
 Given(/^I fill in "([^"]*)" with "([^"]*)"$/) do |name, dish|
-  fill_in 'name', :with=> 'dish'
+  fill_in 'name', with: 'dish'
 end
 
 
